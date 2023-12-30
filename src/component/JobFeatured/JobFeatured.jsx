@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import location_png from '../../assets/imgs/icons/Location.png'
 import salary_png from '../../assets/imgs/icons/money.png'
+import { Link } from 'react-router-dom';
 
 const JobFeatured = ({job}) => {
-    const {logo, job_title, company_name, location, salary, job_type, remote_or_onsite}= job
-    console.log(job)
+    const {id, logo, job_title, company_name, location, salary, job_type, remote_or_onsite}= job
     return (
         <div className='text-left p-5 space-y-3 border rounded-lg'>
                 <img className='mb-6' src={logo} alt={company_name} />
@@ -18,7 +18,9 @@ const JobFeatured = ({job}) => {
                     <p className='text-[#757575]'><img className='mr-2 inline-flex items-center' src={location_png} alt="" /> {location}</p>
                     <p className='text-[#757575]'> <img className='inline-flex mr-3 items-center' src={salary_png}alt="" />{salary}</p>
                 </div>
-                <button className='btn bg-gradient-to-tr from-[#7e90fe] to-[#9873ff] text-white'>View Details</button>
+               <Link to={`/job/${id}`}>
+                    <button className='btn mt-3 bg-gradient-to-tr from-[#7e90fe] to-[#9873ff] text-white'>View Details</button>
+               </Link>
         </div>
     );
 };
