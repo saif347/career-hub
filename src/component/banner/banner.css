@@ -1,3 +1,10 @@
 .banner{
     background: linear-gradient(90deg, rgba(126, 144, 254, 0.05) 0%, rgba(152, 115, 255, 0.05) 100%);
 }
+
+.job-detail{
+    background-image: url(../../assets/imgs/images/bg1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
